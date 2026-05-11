@@ -16,10 +16,10 @@ export function Navbar() {
           <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors font-sans font-light">
             For Founders
           </Link>
-          <button className="px-4 py-2 border border-primary text-primary text-sm font-medium rounded-full hover:bg-primary/10 transition-colors flex items-center gap-2">
+          {/* <button className="px-4 py-2 border border-primary text-primary text-sm font-medium rounded-full hover:bg-primary/10 transition-colors flex items-center gap-2">
             Join Waitlist
             <ArrowRight className="w-3 h-3" />
-          </button>
+          </button> */}
         </div>
       </div>
     </nav>

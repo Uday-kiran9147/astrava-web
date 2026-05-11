@@ -9,13 +9,14 @@ export function Footer() {
           </div>
 
           <div className="text-sm text-muted-foreground font-sans font-light">
-            India's private founder network.
+            private founder network.
           </div>
 
           <div className="flex gap-6 text-sm text-muted-foreground font-sans font-light">
-            <a href="#" className="hover:text-primary transition-colors">Twitter/X</a>
+            <a href="https://twitter.com/astrava_club" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Twitter/X</a>
             <a href="https://www.linkedin.com/company/astrava-club" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a>
-            <a href="#" className="hover:text-primary transition-colors">Contact</a>
+            {/* astrava.club@gmail.com */}
+            <a href="mailto:astrava.club@gmail.com" className="hover:text-primary transition-colors">Contact</a>
           </div>
         </div>
 

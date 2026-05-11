@@ -20,16 +20,14 @@ export function Hero() {
           className="max-w-4xl mx-auto"
         >
           <p className="text-sm uppercase tracking-[0.25em] text-primary font-mono mb-6">
-            INVITE ONLY · PRIVATE NETWORK · INDIA
+            INVITE ONLY · PRIVATE NETWORK
           </p>
 
           <h1 className="text-5xl md:text-7xl font-bold font-display text-foreground mb-6 leading-tight">
-            Where India's{" "}
-            <span className="text-primary italic font-display font-normal">real</span>
+            {" "}
+            <span className="text-primary italic font-display font-normal">Founders</span>
             <br />
-            founders come to
-            <br />
-            think out loud.
+            Private Network
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 font-sans font-light leading-relaxed">
@@ -38,7 +36,7 @@ export function Hero() {
             No posturing. Just honest conversations.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          {/* <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <button className="px-8 py-4 rounded-full bg-primary text-background font-medium hover:bg-[#E8C96A] transition-all transform hover:scale-[1.02] duration-150 flex items-center gap-2 shadow-[0_0_24px_rgba(201,168,76,0.25)]">
               Apply for Membership
               <ArrowRight className="w-4 h-4" />
@@ -47,10 +45,10 @@ export function Hero() {
               See What's Inside
               <ArrowDown className="w-4 h-4" />
             </button>
-          </div>
+          </div> */}
 
           <p className="text-sm text-muted-foreground font-mono mb-12">
-            180+ founders on waitlist · 25 founding member spots remaining
+            fast filling waitlist · 25 founding member spots remaining
           </p>
         </motion.div>
       </div>
