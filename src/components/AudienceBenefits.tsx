@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Check } from "lucide-react";
 
 const audiences = [
@@ -33,6 +34,63 @@ const audiences = [
   },
 ];
 
+interface AudienceCardProps {
+  aud: typeof audiences[0];
+  index: number;
+}
+
+function AudienceCard({ aud, index }: AudienceCardProps) {
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setMousePos({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1, duration: 0.5 }}
+      viewport={{ once: true }}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="border border-border p-8 bg-card/40 flex flex-col justify-between relative overflow-hidden group"
+    >
+      {/* Spotlight Border Glow Layer */}
+      <div 
+        className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 border border-white/20 bg-white/[0.015]"
+        style={{
+          opacity: isHovered ? 1 : 0,
+          WebkitMaskImage: `radial-gradient(150px circle at ${mousePos.x}px ${mousePos.y}px, black, transparent)`,
+          maskImage: `radial-gradient(150px circle at ${mousePos.x}px ${mousePos.y}px, black, transparent)`,
+        }}
+      />
+
+      <div className="relative z-10">
+        <h3 className="text-2xl font-bold font-sans text-foreground mb-4">{aud.title}</h3>
+        <p className="text-muted-foreground text-sm font-light leading-relaxed mb-8">{aud.description}</p>
+        
+        <ul className="space-y-4">
+          {aud.benefits.map((benefit, i) => (
+            <li key={i} className="flex items-center gap-3 text-sm text-foreground/90 font-light">
+              <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Check className="w-3.5 h-3.5 text-accent-foreground" />
+              </div>
+              <span>{benefit}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </motion.div>
+  );
+}
+
 export function AudienceBenefits() {
   return (
     <section className="py-32 relative bg-card/20 border-b border-border">
@@ -48,30 +106,7 @@ export function AudienceBenefits() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {audiences.map((aud, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              viewport={{ once: true }}
-              className="border border-border p-8 bg-card/40 flex flex-col justify-between"
-            >
-              <div>
-                <h3 className="text-2xl font-bold font-sans text-foreground mb-4">{aud.title}</h3>
-                <p className="text-muted-foreground text-sm font-light leading-relaxed mb-8">{aud.description}</p>
-                
-                <ul className="space-y-4">
-                  {aud.benefits.map((benefit, i) => (
-                    <li key={i} className="flex items-center gap-3 text-sm text-foreground/90 font-light">
-                      <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <Check className="w-3.5 h-3.5 text-accent-foreground" />
-                      </div>
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
+            <AudienceCard key={index} aud={aud} index={index} />
           ))}
         </div>
       </div>

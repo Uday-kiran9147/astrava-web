@@ -9,10 +9,12 @@ import { Vision } from "@/components/Vision";
 import { Newsletter } from "@/components/Newsletter";
 import { SubmitProduct } from "@/components/SubmitProduct";
 import { Footer } from "@/components/Footer";
+import { LoadingScreen } from "@/components/LoadingScreen";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-background text-foreground scroll-smooth">
+      <LoadingScreen />
       <Navbar />
       <Hero />
       <Problem />

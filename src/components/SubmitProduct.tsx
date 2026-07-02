@@ -41,7 +41,13 @@ export function SubmitProduct() {
           </p>
         </div>
 
-        <div className="max-w-2xl mx-auto bg-card/40 border border-border p-8 md:p-12 relative shadow-2xl backdrop-blur-sm">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.1 }}
+          className="max-w-2xl mx-auto bg-card/40 border border-border p-8 md:p-12 relative shadow-2xl backdrop-blur-sm"
+        >
           <AnimatePresence mode="wait">
             {!submitted ? (
               <motion.form
@@ -195,7 +201,7 @@ export function SubmitProduct() {
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

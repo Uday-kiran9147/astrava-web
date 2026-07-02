@@ -24,7 +24,13 @@ export function Newsletter() {
   return (
     <section id="newsletter" className="py-32 relative bg-card/20 border-b border-border">
       <div className="container px-6 mx-auto">
-        <div className="max-w-3xl mx-auto border border-border bg-card/80 p-8 md:p-16 relative overflow-hidden shadow-2xl">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.15 }}
+          className="max-w-3xl mx-auto border border-border bg-card/80 p-8 md:p-16 relative overflow-hidden shadow-2xl"
+        >
           {/* Subtle background graphics */}
           <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-primary/5 rounded-full blur-[80px] pointer-events-none" />
           
@@ -110,7 +116,7 @@ export function Newsletter() {
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
