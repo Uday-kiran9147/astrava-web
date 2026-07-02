@@ -28,9 +28,9 @@ export function Criteria() {
             WHO GETS IN
           </p>
           <h2 className="text-3xl md:text-5xl font-bold mb-4 font-display text-foreground">
-            This isn't for everyone.
+            This isn&apos;t for everyone.
             <br />
-            That's the point.
+            That&apos;s the point.
           </h2>
         </div>
 
@@ -43,7 +43,7 @@ export function Criteria() {
             viewport={{ once: true }}
             className="border border-border rounded-xl p-8 bg-card"
           >
-            <h3 className="text-xl font-bold font-display mb-6 text-foreground">We're looking for</h3>
+            <h3 className="text-xl font-bold font-display mb-6 text-foreground">We&apos;re looking for</h3>
             <ul className="space-y-4">
               {lookingFor.map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-sm text-foreground font-light">
@@ -62,7 +62,7 @@ export function Criteria() {
             viewport={{ once: true }}
             className="border border-border rounded-xl p-8 bg-card"
           >
-            <h3 className="text-xl font-bold font-display mb-6 text-foreground">This isn't for</h3>
+            <h3 className="text-xl font-bold font-display mb-6 text-foreground">This isn&apos;t for</h3>
             <ul className="space-y-4">
               {notFor.map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground font-light">

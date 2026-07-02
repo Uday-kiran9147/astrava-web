@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 export function WaitlistForm() {
@@ -15,7 +14,7 @@ export function WaitlistForm() {
             Apply for membership.
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-sans font-light">
-            Tell us about what you're building. We review every application personally.
+            Tell us about what you&apos;re building. We review every application personally.
           </p>
         </div>
 
@@ -97,7 +96,7 @@ export function WaitlistForm() {
           </form>
 
           <p className="text-xs text-center text-muted-foreground mt-6 font-sans font-light">
-            We'll reply within 48 hours. Your information is never shared.
+            We&apos;ll reply within 48 hours. Your information is never shared.
           </p>
         </div>
       </div>

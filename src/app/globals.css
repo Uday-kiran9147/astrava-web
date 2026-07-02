@@ -21,38 +21,38 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --font-sans: var(--font-dm-sans);
-  --font-display: var(--font-playfair);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-instrument-serif);
   --font-mono: var(--font-jetbrains);
 }
 
 :root {
-  --background: #0A0A0A;
-  --foreground: #F5F0E8;
-  --card: #111111;
-  --card-foreground: #F5F0E8;
-  --popover: #111111;
-  --popover-foreground: #F5F0E8;
-  --primary: #C9A84C;
-  --primary-foreground: #0A0A0A;
-  --secondary: #222018;
-  --secondary-foreground: #8A8378;
-  --muted: #222018;
-  --muted-foreground: #8A8378;
-  --accent: #3A3020;
-  --accent-foreground: #E8C96A;
+  --background: #09090B;
+  --foreground: #FAFAFA;
+  --card: #111113;
+  --card-foreground: #FAFAFA;
+  --popover: #111113;
+  --popover-foreground: #FAFAFA;
+  --primary: #FFFFFF;
+  --primary-foreground: #09090B;
+  --secondary: #18181B;
+  --secondary-foreground: #A1A1AA;
+  --muted: #18181B;
+  --muted-foreground: #A1A1AA;
+  --accent: #27272A;
+  --accent-foreground: #E4E4E7;
   --destructive: #ef4444;
   --destructive-foreground: #fafafa;
-  --border: #222018;
-  --input: #111111;
-  --ring: #C9A84C;
+  --border: #27272A;
+  --input: #18181B;
+  --ring: #FAFAFA;
   
   /* Custom colors from brief */
-  --text-primary: #F5F0E8;
-  --text-secondary: #8A8378;
-  --text-tertiary: #4A4540;
-  --border-accent: #3A3020;
-  --success-green: #2D6A4F;
+  --text-primary: #FAFAFA;
+  --text-secondary: #A1A1AA;
+  --text-tertiary: #52525B;
+  --border-accent: #27272A;
+  --success-green: #10B981;
 }
 
 @layer base {

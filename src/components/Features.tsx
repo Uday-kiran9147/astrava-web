@@ -1,69 +1,59 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { User, LayoutGrid, Coins, Briefcase, Mic, Newspaper } from "lucide-react";
+import { Compass, BarChart2, Megaphone } from "lucide-react";
 
-const features = [
+const steps = [
   {
-    icon: User,
-    title: "Founder Profiles",
-    description: "Verified profiles with your live product, traction metrics, and what you're working on right now. No fake follower counts.",
+    icon: Compass,
+    title: "Discover",
+    description: "We uncover promising software products, diving deep into early traction, unique features, and the teams behind them.",
   },
   {
-    icon: LayoutGrid,
-    title: "Startup Showcase",
-    description: "Feature your startup to a room of founders, angels, and operators who actually read it.",
+    icon: BarChart2,
+    title: "Analyze",
+    description: "We break down growth and distribution strategies, explaining exactly how products acquire their first 1,000 users.",
   },
   {
-    icon: Coins,
-    title: "Investor Matching",
-    description: "When you're ready, we introduce you directly. No cold emails. No LinkedIn spray-and-pray.",
-  },
-  {
-    icon: Briefcase,
-    title: "Hiring Board",
-    description: "Post roles to a network of builders. Find your technical co-founder, first engineer, or growth hire.",
-  },
-  {
-    icon: Mic,
-    title: "Weekly Founder Rooms",
-    description: "Private audio rooms every week. Real conversations about real problems — runway, pricing, product bets.",
-  },
-  {
-    icon: Newspaper,
-    title: "Founder Digest",
-    description: "Weekly roundup of the most interesting Indian startup stories, curated by founders, for founders.",
+    icon: Megaphone,
+    title: "Amplify",
+    description: "We help great products reach new audiences by putting them in front of our network of founders, investors, and early adopters.",
   },
 ];
 
 export function Features() {
   return (
-    <section className="py-24 relative bg-card">
-      <div className="container px-4 mx-auto">
-        <div className="text-center mb-16">
-          <p className="text-sm uppercase tracking-[0.25em] text-primary font-mono mb-4">
-            INSIDE THE CLUB
-          </p>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 font-display text-foreground">
-            Everything a founder actually needs.
+    <section id="what-we-do" className="py-32 relative bg-background">
+      <div className="container px-6 mx-auto">
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <span className="text-xs text-primary font-mono uppercase tracking-[0.25em] mb-4 inline-block">
+            Our Core Methodology
+          </span>
+          <h2 className="text-3xl md:text-5xl font-bold font-sans text-foreground leading-[1.1] tracking-tight">
+            How Astrava shapes the future of software discovery.
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {steps.map((step, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
+              transition={{ delay: index * 0.15, duration: 0.5, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="border border-border rounded-xl p-8 hover:border-[#3A3020] hover:-translate-y-1 transition-all duration-200 bg-background"
+              className="border border-border p-8 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(255,255,255,0.02)] hover:-translate-y-1 transition-all duration-300 bg-card/60 flex flex-col justify-between group relative overflow-hidden"
             >
-              <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center mb-6">
-                <feature.icon className="w-6 h-6 text-primary" />
+              {/* Subtle top border highlight on hover */}
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              <div>
+                <div className="w-12 h-12 bg-primary/5 border border-primary/20 flex items-center justify-center mb-8 group-hover:bg-primary/10 group-hover:border-primary/40 transition-colors">
+                  <step.icon className="w-5 h-5 text-accent-foreground" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 font-sans text-foreground">{step.title}</h3>
+                <p className="text-muted-foreground font-light leading-relaxed text-sm md:text-base">{step.description}</p>
               </div>
-              <h3 className="text-xl font-bold mb-3 font-display">{feature.title}</h3>
-              <p className="text-muted-foreground font-light">{feature.description}</p>
             </motion.div>
           ))}
         </div>
@@ -71,3 +61,4 @@ export function Features() {
     </section>
   );
 }
+

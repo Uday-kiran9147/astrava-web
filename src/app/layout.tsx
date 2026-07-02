@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { DM_Sans, Playfair_Display, JetBrains_Mono } from "next/font/google";
+import { Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const instrumentSerif = Instrument_Serif({ subsets: ["latin"], weight: ["400"], variable: "--font-instrument-serif" });
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" });
 
 export const metadata: Metadata = {
-  title: "Astrava Club | Founder Network",
-  description: "A curated, invite-only network for Indian founders who are actively building. No noise. No fluff. Apply for founding membership.",
+  title: "Astrava — Helping Great Software Products Get Discovered",
+  description: "Discover promising software products, founder stories, and growth insights before everyone else.",
   icons: {
     icon: "/astrava.png",
   },
@@ -23,8 +23,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={cn(
-        dmSans.variable,
-        playfair.variable,
+        inter.variable,
+        instrumentSerif.variable,
         jetbrains.variable,
         "font-sans antialiased bg-background text-foreground min-h-screen"
       )}>
@@ -33,3 +33,4 @@ export default function RootLayout({
     </html>
   );
 }
+
