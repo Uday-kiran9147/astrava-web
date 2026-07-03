@@ -35,8 +35,8 @@ export function Footer() {
           <div className="flex flex-wrap justify-center gap-8 text-sm text-muted-foreground font-sans font-medium">
             <button onClick={() => handleScroll("discover")} className="hover:text-primary transition-colors cursor-pointer">About</button>
             <button onClick={() => handleScroll("newsletter")} className="hover:text-primary transition-colors cursor-pointer">Newsletter</button>
-            <a href="https://twitter.com/astrava_hq" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Twitter</a>
-            <a href="https://linkedin.com/company/astrava" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a>
+            <a href="https://twitter.com/astrava_club" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Twitter</a>
+            <a href="https://linkedin.com/company/astrava-club" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a>
           </div>
         </div>
 
