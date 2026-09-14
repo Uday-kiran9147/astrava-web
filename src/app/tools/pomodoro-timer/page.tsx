@@ -17,7 +17,7 @@ export default function PomodoroTimerPage() {
         <Breadcrumbs
           items={[
             { label: 'Tools', href: '/tools' },
-            { label: 'Pomodoro Timer', href: '/tools/pomodoro-timer', active: true },
+            { label: 'Pomodoro Timer', href: '/tools/pomodoro-timer' },
           ]}
         />
 

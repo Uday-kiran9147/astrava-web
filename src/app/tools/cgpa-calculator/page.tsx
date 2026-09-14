@@ -17,7 +17,7 @@ export default function CgpaCalculatorPage() {
         <Breadcrumbs
           items={[
             { label: 'Tools', href: '/tools' },
-            { label: 'CGPA Calculator', href: '/tools/cgpa-calculator', active: true },
+            { label: 'CGPA Calculator', href: '/tools/cgpa-calculator' },
           ]}
         />
 
