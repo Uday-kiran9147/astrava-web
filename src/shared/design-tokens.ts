@@ -46,6 +46,6 @@ export class DesignTokens {
   static readonly SHADOW_CTA = '0 4px 14px rgba(30, 80, 255, 0.35)';
 
   // Fonts
-  static readonly FONT_SANS = "'Inter', system-ui, -apple-system, sans-serif";
+  static readonly FONT_SANS = "'Arial Unicode MS', 'Arial', 'Inter', system-ui, -apple-system, sans-serif";
   static readonly FONT_MONO = "'JetBrains Mono', 'SF Mono', Consolas, monospace";
 }

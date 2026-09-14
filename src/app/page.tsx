@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { SiteConstants } from '@/shared/site.constants';
 
 export const metadata: Metadata = {
-  title: 'Astrava — Free Student Utility Hub | High-Precision Academic Tools',
+  title: 'Astrava - Free Student Utility Hub | High-Precision Academic Tools',
   description: 'Fast, free, 100% client-side academic calculators and study utilities for students. Calculate attendance, CGPA, GPA, and study with precision.',
   alternates: {
     canonical: SiteConstants.SITE_URL,
@@ -165,33 +165,63 @@ export default function HomePage() {
 
         {/* Study & Productivity Tools Grid */}
         <section className="space-y-4">
-          <div className="border-b border-slate-200 pb-2">
+          <div className="border-b border-slate-200 pb-2 flex items-center justify-between">
             <h2 className="text-lg sm:text-xl font-bold text-slate-900">
               Study & Productivity Utilities
             </h2>
+            <Link href="/tools" className="text-xs font-semibold text-[#1E50FF] hover:underline">
+              View all →
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {studyTools.map((tool) => (
-              <div key={tool.slug} className="opacity-65">
-                <Card variant="default" className="h-full bg-white border-slate-200 p-5 flex flex-col justify-between">
+              <Link
+                key={tool.slug}
+                href={tool.isAvailable ? tool.path : '#'}
+                className={`group block focus:outline-none ${!tool.isAvailable ? 'opacity-65 cursor-not-allowed' : ''}`}
+              >
+                <Card
+                  variant="default"
+                  className="h-full bg-white border-slate-200 hover:border-slate-300 hover:shadow-md transition-all duration-150 p-5 flex flex-col justify-between"
+                >
                   <div>
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
                         {tool.category}
                       </span>
-                      <span className="text-[10px] font-semibold uppercase px-2 py-0.5 rounded bg-slate-100 text-slate-500 border border-slate-200">
-                        Coming Soon
-                      </span>
+                      {tool.badge && (
+                        <span
+                          className={`text-[10px] font-semibold uppercase px-2 py-0.5 rounded ${
+                            tool.isAvailable
+                              ? 'bg-blue-50 text-blue-700 border border-blue-200'
+                              : 'bg-slate-100 text-slate-500 border border-slate-200'
+                          }`}
+                        >
+                          {tool.badge}
+                        </span>
+                      )}
                     </div>
-                    <h3 className="text-base font-bold text-slate-800 mb-1.5">{tool.name}</h3>
-                    <p className="text-xs text-slate-500 leading-relaxed">{tool.shortDescription}</p>
+                    <h3 className="text-base font-bold text-slate-900 group-hover:text-[#1E50FF] transition-colors mb-1.5">
+                      {tool.name}
+                    </h3>
+                    <p className="text-xs text-slate-500 leading-relaxed">
+                      {tool.shortDescription}
+                    </p>
                   </div>
-                  <div className="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-400">
-                    ○ Phase 2
+
+                  <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                    <span className={tool.isAvailable ? 'text-emerald-600 font-semibold' : 'text-slate-400'}>
+                      {tool.isAvailable ? '● Ready to use' : '○ Launching soon'}
+                    </span>
+                    {tool.isAvailable && (
+                      <span className="text-[#1E50FF] font-semibold">
+                        Launch →
+                      </span>
+                    )}
                   </div>
                 </Card>
-              </div>
+              </Link>
             ))}
           </div>
         </section>

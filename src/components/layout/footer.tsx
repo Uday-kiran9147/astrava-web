@@ -33,11 +33,11 @@ export const Footer: FC = () => {
             <Link href="/tools/attendance-calculator" className="text-xs text-slate-600 hover:text-slate-900 transition-colors">
               Attendance Calculator
             </Link>
-            <Link href="/tools/cgpa-calculator" className="text-xs text-slate-400 hover:text-slate-600 transition-colors">
+            <Link href="/tools/cgpa-calculator" className="text-xs text-slate-600 hover:text-slate-900 transition-colors">
               CGPA Calculator
             </Link>
-            <Link href="/tools/percentage-calculator" className="text-xs text-slate-400 hover:text-slate-600 transition-colors">
-              Percentage Calculator
+            <Link href="/tools/pomodoro-timer" className="text-xs text-slate-600 hover:text-slate-900 transition-colors">
+              Pomodoro Timer
             </Link>
             <Link href="/tools" className="text-xs text-[#1E50FF] font-semibold hover:underline mt-1">
               Browse All 10 Tools →

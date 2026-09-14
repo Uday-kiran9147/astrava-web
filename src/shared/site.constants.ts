@@ -12,7 +12,7 @@ export class SiteConstants {
     { label: 'Calculators', href: '/tools' },
     { label: 'Attendance', href: '/tools/attendance-calculator' },
     { label: 'CGPA', href: '/tools/cgpa-calculator' },
-    { label: 'Percentage', href: '/tools/percentage-calculator' },
+    { label: 'Pomodoro', href: '/tools/pomodoro-timer' },
     { label: 'About', href: '/about' },
   ] as const;
 
@@ -41,8 +41,8 @@ export class SiteConstants {
       category: 'academics',
       path: '/tools/cgpa-calculator',
       iconName: 'GraduationCap',
-      isAvailable: false,
-      badge: 'COMING SOON',
+      isAvailable: true,
+      badge: 'POPULAR',
     },
     {
       slug: 'gpa-calculator',
@@ -101,8 +101,8 @@ export class SiteConstants {
       category: 'study',
       path: '/tools/pomodoro-timer',
       iconName: 'Timer',
-      isAvailable: false,
-      badge: 'COMING SOON',
+      isAvailable: true,
+      badge: 'NEW',
     },
     {
       slug: 'word-counter',
