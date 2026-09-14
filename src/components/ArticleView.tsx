@@ -40,7 +40,7 @@ export function ArticleView({ article, nextArticle }: ArticleViewProps) {
 
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/astrava.png"
+              src="/utility.png"
               alt="Astrava Logo"
               width={26}
               height={26}

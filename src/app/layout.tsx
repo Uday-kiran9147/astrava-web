@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description: "High-precision academic calculators and study utilities engineered for students. 100% free, client-side, zero login.",
   metadataBase: new URL('https://astrava.club'),
   icons: {
-    icon: "/astrava.png",
+    icon: "/utility.png",
     apple: "/apple-icon.png",
   },
 };

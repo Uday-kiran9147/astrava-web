@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { SiteConstants } from '@/shared/site.constants';
 
 export const Footer: FC = () => {
@@ -10,9 +11,13 @@ export const Footer: FC = () => {
           {/* Brand Col */}
           <div className="md:col-span-2 flex flex-col gap-2.5">
             <div className="flex items-center gap-2">
-              <div className="w-5 h-5 rounded-[5px] bg-[#1E50FF] flex items-center justify-center font-bold text-white text-xs">
-                A
-              </div>
+              <Image
+                src="/utility.png"
+                alt="Astrava Logo"
+                width={20}
+                height={20}
+                className="w-5 h-5 object-contain rounded-[5px]"
+              />
               <span className="font-bold text-base tracking-tight text-slate-900">
                 {SiteConstants.SITE_NAME}
               </span>

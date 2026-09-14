@@ -29,7 +29,7 @@ export function Navbar() {
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           <Image 
-            src="/astrava.png" 
+            src="/utility.png" 
             alt="Astrava Logo" 
             width={32} 
             height={32} 

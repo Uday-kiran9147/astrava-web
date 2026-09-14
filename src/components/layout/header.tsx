@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { SiteConstants } from '@/shared/site.constants';
 
 export const Header: FC = () => {
@@ -8,9 +9,14 @@ export const Header: FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 h-15 flex items-center justify-between">
         {/* Brand */}
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-7 h-7 rounded-[7px] bg-[#1E50FF] flex items-center justify-center font-black text-white text-sm shadow-sm group-hover:bg-[#0038D1] transition-colors">
-            A
-          </div>
+          <Image
+            src="/utility.png"
+            alt="Astrava Logo"
+            width={28}
+            height={28}
+            className="w-7 h-7 object-contain rounded-[7px]"
+            priority
+          />
           <div className="flex flex-col">
             <span className="font-extrabold text-base tracking-tight text-slate-900 group-hover:text-[#1E50FF] transition-colors leading-none">
               {SiteConstants.SITE_NAME}
