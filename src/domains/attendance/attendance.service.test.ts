@@ -11,10 +11,10 @@ function runTests(): void {
   function assert(condition: boolean, testName: string, detail?: unknown): void {
     if (condition) {
       passed++;
-      console.log(`  ✓ PASS: ${testName}`);
+      console.log(`  [PASS] ${testName}`);
     } else {
       failed++;
-      console.error(`  ✗ FAIL: ${testName}`, detail ?? '');
+      console.error(`  [FAIL] ${testName}`, detail ?? '');
     }
   }
 

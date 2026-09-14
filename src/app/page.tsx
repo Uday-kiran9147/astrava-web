@@ -78,13 +78,13 @@ export default function HomePage() {
                   Find out exactly how many lectures you can safely skip or how many consecutive classes you must attend to meet your university attendance quota.
                 </p>
                 <div className="flex flex-wrap gap-2 pt-1 text-xs text-slate-500">
-                  <span>✓ 75% standard</span>
+                  <span className="inline-flex items-center gap-1"><span aria-hidden="true" className="material-icons text-sm">check</span>75% standard</span>
                   <span>·</span>
-                  <span>✓ 80% rule</span>
+                  <span className="inline-flex items-center gap-1"><span aria-hidden="true" className="material-icons text-sm">check</span>80% rule</span>
                   <span>·</span>
-                  <span>✓ Custom targets</span>
+                  <span className="inline-flex items-center gap-1"><span aria-hidden="true" className="material-icons text-sm">check</span>Custom targets</span>
                   <span>·</span>
-                  <span>✓ Worked breakdown</span>
+                  <span className="inline-flex items-center gap-1"><span aria-hidden="true" className="material-icons text-sm">check</span>Worked breakdown</span>
                 </div>
               </div>
 

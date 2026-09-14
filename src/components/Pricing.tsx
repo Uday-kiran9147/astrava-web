@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
 
 const includes = [
   "Full community access",
@@ -52,16 +51,16 @@ export function Pricing() {
               <ul className="space-y-3 mb-8">
                 {includes.map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-foreground font-light">
-                    <Check className="w-4 h-4 text-primary" />
+                    <span aria-hidden="true" className="material-icons w-4 h-4 text-primary">check</span>
                     {item}
                   </li>
                 ))}
                 <li className="flex items-center gap-2 text-sm text-foreground font-light">
-                  <Check className="w-4 h-4 text-primary" />
+                  <span aria-hidden="true" className="material-icons w-4 h-4 text-primary">check</span>
                   Founding member badge (permanent)
                 </li>
                 <li className="flex items-center gap-2 text-sm text-foreground font-light">
-                  <Check className="w-4 h-4 text-primary" />
+                  <span aria-hidden="true" className="material-icons w-4 h-4 text-primary">check</span>
                   Direct access to founding team
                 </li>
               </ul>
@@ -94,7 +93,7 @@ export function Pricing() {
               <ul className="space-y-3 mb-8">
                 {includes.map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-foreground font-light">
-                    <Check className="w-4 h-4 text-primary" />
+                    <span aria-hidden="true" className="material-icons w-4 h-4 text-primary">check</span>
                     {item}
                   </li>
                 ))}

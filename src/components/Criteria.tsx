@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, X } from "lucide-react";
 
 const lookingFor = [
   "Founders with a live product (doesn't need to be profitable)",
@@ -47,7 +46,7 @@ export function Criteria() {
             <ul className="space-y-4">
               {lookingFor.map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-sm text-foreground font-light">
-                  <Check className="w-5 h-5 text-[#2D6A4F] flex-shrink-0 mt-0.5" />
+                  <span aria-hidden="true" className="material-icons w-5 h-5 text-[#2D6A4F] flex-shrink-0 mt-0.5">check</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -66,7 +65,7 @@ export function Criteria() {
             <ul className="space-y-4">
               {notFor.map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground font-light">
-                  <X className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
+                  <span aria-hidden="true" className="material-icons w-5 h-5 text-destructive flex-shrink-0 mt-0.5">close</span>
                   <span>{item}</span>
                 </li>
               ))}

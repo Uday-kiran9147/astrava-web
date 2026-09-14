@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { ArrowDown } from "lucide-react";
 
 function Counter({ value, duration = 1.5 }: { value: number; duration?: number }) {
   const [count, setCount] = useState(0);
@@ -109,7 +108,7 @@ export function Problem() {
                       viewport={{ once: true }}
                       className="my-1.5"
                     >
-                      <ArrowDown className="w-4 h-4 text-primary/60" />
+                      <span aria-hidden="true" className="material-icons w-4 h-4 text-primary/60">arrow_downward</span>
                     </motion.div>
                   )}
                 </div>

@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, CheckCircle2, ChevronDown } from "lucide-react";
 
 export function SubmitProduct() {
   const [submitted, setSubmitted] = useState(false);
@@ -152,7 +151,7 @@ export function SubmitProduct() {
                       <option value="scaling">Scaling / Venture Backed</option>
                     </select>
                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-muted-foreground">
-                      <ChevronDown className="w-4 h-4" />
+                      <span aria-hidden="true" className="material-icons w-4 h-4">expand_more</span>
                     </div>
                   </div>
                 </div>
@@ -163,7 +162,7 @@ export function SubmitProduct() {
                   className="w-full px-6 py-4 bg-primary text-primary-foreground font-semibold hover:bg-accent-foreground transition-all duration-300 flex items-center justify-center gap-2 text-sm disabled:opacity-50 cursor-pointer shadow-[0_0_20px_rgba(255,255,255,0.06)] hover:shadow-[0_0_30px_rgba(255,255,255,0.12)]"
                 >
                   {loading ? "Submitting..." : "Submit Product for Curation"}
-                  <ArrowRight className="w-4 h-4" />
+                  <span aria-hidden="true" className="material-icons w-4 h-4">arrow_forward</span>
                 </button>
               </motion.form>
             ) : (
@@ -174,7 +173,7 @@ export function SubmitProduct() {
                 className="text-center py-10 space-y-6"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 border border-primary/20 mb-2">
-                  <CheckCircle2 className="w-8 h-8 text-accent-foreground" />
+                  <span aria-hidden="true" className="material-icons w-8 h-8 text-accent-foreground">check_circle</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold font-sans text-foreground">
                   Submission Received

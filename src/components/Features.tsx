@@ -2,21 +2,20 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Compass, BarChart2, Megaphone } from "lucide-react";
 
 const steps = [
   {
-    icon: Compass,
+    icon: "explore",
     title: "Discover",
     description: "We uncover promising software products, diving deep into early traction, unique features, and the teams behind them.",
   },
   {
-    icon: BarChart2,
+    icon: "bar_chart",
     title: "Analyze",
     description: "We break down growth and distribution strategies, explaining exactly how products acquire their first 1,000 users.",
   },
   {
-    icon: Megaphone,
+    icon: "campaign",
     title: "Amplify",
     description: "We help great products reach new audiences by putting them in front of our network of founders, investors, and early adopters.",
   },
@@ -65,7 +64,7 @@ function FeatureCard({ step, index }: FeatureCardProps) {
       
       <div className="relative z-10">
         <div className="w-12 h-12 bg-primary/5 border border-primary/20 flex items-center justify-center mb-8 group-hover:bg-primary/10 group-hover:border-primary/40 transition-colors">
-          <step.icon className="w-5 h-5 text-accent-foreground" />
+          <span aria-hidden="true" className="material-icons w-5 h-5 text-accent-foreground">{step.icon}</span>
         </div>
         <h3 className="text-2xl font-bold mb-4 font-sans text-foreground">{step.title}</h3>
         <p className="text-muted-foreground font-light leading-relaxed text-sm md:text-base">{step.description}</p>

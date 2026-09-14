@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle2, ShieldCheck, Calendar, Bell } from "lucide-react";
 
 export function Newsletter() {
   const [email, setEmail] = useState("");
@@ -77,15 +76,15 @@ export function Newsletter() {
                 {/* Trust Signals */}
                 <div className="pt-4 flex flex-wrap justify-center items-center gap-6 md:gap-10 text-[10px] md:text-xs text-muted-foreground font-mono">
                   <div className="flex items-center gap-1.5">
-                    <Calendar className="w-3.5 h-3.5 text-primary" />
+                    <span aria-hidden="true" className="material-icons w-3.5 h-3.5 text-primary">calendar_month</span>
                     <span>Weekly Digest</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <ShieldCheck className="w-3.5 h-3.5 text-primary" />
+                    <span aria-hidden="true" className="material-icons w-3.5 h-3.5 text-primary">verified_user</span>
                     <span>No Spam Guaranteed</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <Bell className="w-3.5 h-3.5 text-primary" />
+                    <span aria-hidden="true" className="material-icons w-3.5 h-3.5 text-primary">notifications</span>
                     <span>Unsubscribe Anytime</span>
                   </div>
                 </div>
@@ -99,7 +98,7 @@ export function Newsletter() {
                 className="text-center py-8 space-y-6 relative z-10"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 border border-primary/20 mb-2">
-                  <CheckCircle2 className="w-8 h-8 text-accent-foreground" />
+                  <span aria-hidden="true" className="material-icons w-8 h-8 text-accent-foreground">check_circle</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold font-sans text-foreground">
                   You&apos;re on the list.

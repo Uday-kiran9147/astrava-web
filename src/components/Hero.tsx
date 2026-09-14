@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail } from "lucide-react";
 
 class Particle {
   x: number;
@@ -178,13 +177,13 @@ export function Hero() {
               className="w-full sm:w-auto px-8 py-4 bg-primary text-primary-foreground font-semibold hover:bg-accent-foreground hover:shadow-[0_0_30px_rgba(255,255,255,0.12)] transition-all transform hover:scale-[1.02] duration-150 flex items-center justify-center gap-2 group cursor-pointer"
             >
               Submit Product
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <span aria-hidden="true" className="material-icons w-4 h-4 group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </button>
             <button 
               onClick={() => handleScroll("newsletter")}
               className="w-full sm:w-auto px-8 py-4 border border-border bg-card/50 text-foreground font-semibold hover:bg-card hover:border-muted transition-colors flex items-center justify-center gap-2 cursor-pointer"
             >
-              <Mail className="w-4 h-4 text-muted-foreground" />
+              <span aria-hidden="true" className="material-icons w-4 h-4 text-muted-foreground">mail</span>
               Join Newsletter
             </button>
           </div>

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
@@ -52,9 +51,9 @@ export function FAQ() {
                 >
                   <span className="font-display font-bold text-foreground">{faq.q}</span>
                   {isOpen ? (
-                    <ChevronUp className="w-5 h-5 text-primary" />
+                    <span aria-hidden="true" className="material-icons w-5 h-5 text-primary">expand_less</span>
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-muted-foreground" />
+                    <span aria-hidden="true" className="material-icons w-5 h-5 text-muted-foreground">expand_more</span>
                   )}
                 </button>
                 {isOpen && (

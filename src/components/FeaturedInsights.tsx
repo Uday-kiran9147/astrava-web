@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { articles } from "@/lib/articles";
 
@@ -20,7 +19,7 @@ export function FeaturedInsights() {
           </div>
           <button className="text-sm font-semibold text-accent-foreground hover:text-primary flex items-center gap-1 group transition-colors self-start md:self-auto">
             View All Editorial
-            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            <span aria-hidden="true" className="material-icons w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">north_east</span>
           </button>
         </div>
 
@@ -52,7 +51,7 @@ export function FeaturedInsights() {
                   <span>{art.readTime}</span>
                   <span className="group-hover:text-accent-foreground font-semibold flex items-center gap-0.5 transition-colors">
                     Read Article
-                    <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <span aria-hidden="true" className="material-icons w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity">north_east</span>
                   </span>
                 </div>
               </motion.article>

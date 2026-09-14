@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 export function Navbar() {
@@ -73,7 +72,7 @@ export function Navbar() {
             className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-semibold hover:bg-accent-foreground transition-all duration-300 flex items-center gap-1.5 shadow-[0_0_20px_rgba(255,255,255,0.06)] hover:shadow-[0_0_25px_rgba(255,255,255,0.12)] hover:-translate-y-0.5"
           >
             Submit Product
-            <ArrowRight className="w-3.5 h-3.5" />
+            <span aria-hidden="true" className="material-icons w-3.5 h-3.5">arrow_forward</span>
           </button>
         </div>
       </div>

@@ -4,7 +4,7 @@ import { PomodoroTimerComponent } from '@/components/tools/pomodoro-timer/pomodo
 
 export const metadata: Metadata = {
   title: 'Pomodoro Focus Timer | Astrava',
-  description: 'Boost your study productivity with Astrava Pomodoro Timer. Features drift-free background precision, customizable focus/break intervals, and quick presets.',
+  description: 'A simple, precise Pomodoro focus timer for study sessions.',
   alternates: {
     canonical: 'https://astrava.club/tools/pomodoro-timer',
   },
@@ -12,26 +12,28 @@ export const metadata: Metadata = {
 
 export default function PomodoroTimerPage() {
   return (
-    <div className="min-h-screen bg-[#F8FAFC] py-8 sm:py-12">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <main
+      className="min-h-screen bg-[#020006] px-4 py-6 text-white sm:px-6 sm:py-10"
+      style={{
+        backgroundImage: 'radial-gradient(circle at 12% 18%, rgba(255,255,255,0.55) 0 1px, transparent 1.5px), radial-gradient(circle at 28% 42%, rgba(255,255,255,0.35) 0 1px, transparent 1.5px), radial-gradient(circle at 72% 18%, rgba(255,255,255,0.45) 0 1px, transparent 1.5px), radial-gradient(circle at 89% 64%, rgba(255,255,255,0.3) 0 1px, transparent 1.5px), radial-gradient(circle at 56% 82%, rgba(255,255,255,0.3) 0 1px, transparent 1.5px)',
+      }}
+    >
+      <div className="mx-auto max-w-5xl">
         <Breadcrumbs
+          className="text-violet-300/70 [&_span[aria-current='page']]:text-violet-100 [&_span.text-slate-300]:text-violet-500/50"
           items={[
             { label: 'Tools', href: '/tools' },
             { label: 'Pomodoro Timer', href: '/tools/pomodoro-timer' },
           ]}
         />
 
-        <div className="mt-8 mb-10 max-w-3xl mx-auto text-center">
-          <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
-            Pomodoro Focus Timer
+        <div className="mx-auto mt-8 max-w-4xl">
+          <h1 className="mb-6 text-center text-lg font-semibold tracking-tight text-violet-100 sm:text-xl">
+            Pomodoro Timer
           </h1>
-          <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            Stay focused and avoid burnout with interval-based study sessions. Accurate timestamp tracking guarantees no timer drift when switching tabs.
-          </p>
+          <PomodoroTimerComponent />
         </div>
-
-        <PomodoroTimerComponent />
       </div>
-    </div>
+    </main>
   );
 }

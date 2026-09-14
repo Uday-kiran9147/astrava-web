@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Check } from "lucide-react";
 
 const audiences = [
   {
@@ -80,7 +79,7 @@ function AudienceCard({ aud, index }: AudienceCardProps) {
           {aud.benefits.map((benefit, i) => (
             <li key={i} className="flex items-center gap-3 text-sm text-foreground/90 font-light">
               <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <Check className="w-3.5 h-3.5 text-accent-foreground" />
+                <span aria-hidden="true" className="material-icons w-3.5 h-3.5 text-accent-foreground">check</span>
               </div>
               <span>{benefit}</span>
             </li>

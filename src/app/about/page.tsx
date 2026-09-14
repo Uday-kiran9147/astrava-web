@@ -34,15 +34,15 @@ export default function AboutPage() {
           <h2 className="text-base sm:text-lg font-bold text-slate-900">Our Core Principles</h2>
           <ul className="space-y-3 text-sm text-slate-600">
             <li className="flex items-start gap-2.5">
-              <span className="text-emerald-600 font-bold">✓</span>
+              <span aria-hidden="true" className="material-icons mt-0.5 text-base text-emerald-600">check</span>
               <span><strong>100% Client-Side Calculations:</strong> All math formulas run directly inside your web browser. No student marks, attendance numbers, or essays are ever sent to a server.</span>
             </li>
             <li className="flex items-start gap-2.5">
-              <span className="text-emerald-600 font-bold">✓</span>
+              <span aria-hidden="true" className="material-icons mt-0.5 text-base text-emerald-600">check</span>
               <span><strong>Zero Login Friction:</strong> No account creation, no passwords, no forced newsletters. Land, calculate in 10 seconds, and get back to your study.</span>
             </li>
             <li className="flex items-start gap-2.5">
-              <span className="text-emerald-600 font-bold">✓</span>
+              <span aria-hidden="true" className="material-icons mt-0.5 text-base text-emerald-600">check</span>
               <span><strong>Exact Mathematical Precision:</strong> Every tool is audited for exact university formula standards and edge cases.</span>
             </li>
           </ul>

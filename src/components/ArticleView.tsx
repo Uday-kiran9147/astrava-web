@@ -4,7 +4,6 @@ import { Article } from "@/lib/articles";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, Calendar, User, Clock, ChevronRight } from "lucide-react";
 
 interface ArticleViewProps {
   article: Article;
@@ -34,7 +33,7 @@ export function ArticleView({ article, nextArticle }: ArticleViewProps) {
             href="/"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 group font-mono"
           >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+            <span aria-hidden="true" className="material-icons w-4 h-4 group-hover:-translate-x-1 transition-transform">arrow_back</span>
             Back to Home
           </Link>
 
@@ -52,7 +51,7 @@ export function ArticleView({ article, nextArticle }: ArticleViewProps) {
           </Link>
 
           <div className="hidden sm:flex items-center gap-1.5 text-xs text-muted-foreground font-mono">
-            <Clock className="w-3.5 h-3.5" />
+            <span aria-hidden="true" className="material-icons w-3.5 h-3.5">schedule</span>
             <span>{article.readTime}</span>
           </div>
         </div>
@@ -82,15 +81,15 @@ export function ArticleView({ article, nextArticle }: ArticleViewProps) {
 
             <div className="pt-4 border-b border-border pb-6 flex flex-wrap gap-6 text-xs text-muted-foreground font-mono">
               <div className="flex items-center gap-2">
-                <User className="w-4 h-4 text-primary" />
+                <span aria-hidden="true" className="material-icons w-4 h-4 text-primary">person</span>
                 <span>{article.author}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-primary" />
+                <span aria-hidden="true" className="material-icons w-4 h-4 text-primary">calendar_month</span>
                 <span>{article.date}</span>
               </div>
               <div className="flex items-center gap-2 sm:hidden">
-                <Clock className="w-4 h-4 text-primary" />
+                <span aria-hidden="true" className="material-icons w-4 h-4 text-primary">schedule</span>
                 <span>{article.readTime}</span>
               </div>
             </div>
@@ -146,7 +145,7 @@ export function ArticleView({ article, nextArticle }: ArticleViewProps) {
                       {nextArticle.title}
                     </h3>
                   </div>
-                  <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                  <span aria-hidden="true" className="material-icons w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all">chevron_right</span>
                 </div>
               </Link>
             </motion.div>

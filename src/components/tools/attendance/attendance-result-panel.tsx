@@ -79,7 +79,7 @@ export const AttendanceResultView: FC<AttendanceResultViewProps> = ({ result, on
         actionButtons={
           <>
             <Button variant="outline" size="sm" onClick={handleCopySummary}>
-              {copied ? '✓ Copied' : 'Copy Summary'}
+              {copied ? <><span aria-hidden="true" className="material-icons text-base">check</span> Copied</> : 'Copy Summary'}
             </Button>
             <Button variant="ghost" size="sm" onClick={onReset}>
               Reset

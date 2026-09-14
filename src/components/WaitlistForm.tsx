@@ -1,6 +1,5 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
 
 export function WaitlistForm() {
   return (
@@ -91,7 +90,7 @@ export function WaitlistForm() {
               className="w-full px-6 py-4 bg-primary text-background font-medium rounded-lg hover:bg-[#E8C96A] transition-colors flex items-center justify-center gap-2 font-sans"
             >
               Submit Application
-              <ArrowRight className="w-4 h-4" />
+              <span aria-hidden="true" className="material-icons w-4 h-4">arrow_forward</span>
             </button>
           </form>
 
