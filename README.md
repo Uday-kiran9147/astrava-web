@@ -7,7 +7,7 @@
 [![Framer Motion](https://img.shields.io/badge/Framer%20Motion-12.x-ff69b4?style=flat-square&logo=framer-motion)](https://www.framer.com/motion/)
 
 **Astrava Club** is a premium, invite-only digital network for Indian founders with a live product and a real problem to solve. Designed with an editorial, sophisticated, and minimal aesthetic, the landing page serves as the entry point for membership applications and community waiting lists.
-
+ 
 For the detailed Product Requirements Document, please see the [PRD.md](file:///c:/MyFiles/company/Astrava.club/astrava-web/PRD.md).
 
 ---
